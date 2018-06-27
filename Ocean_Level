@@ -24,3 +24,4 @@ int main ()
     year = 10;
     cout << " The ocean's level in 10 years: " << year* rate << " Millimeters.\n";
     return 0;
+}
