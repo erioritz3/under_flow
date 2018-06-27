@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+int main ()
+
+{
+   ///Declare variable for ocean level in 5 years.
+    int year, rate ;
+    
+    rate = 1.7;
+    year = 5;
+    cout << " The ocean's level in 5 years: " << year* rate << " Millimeters.\n";
+    
+    // Ocean level in 7 years.
+    
+    
+     rate = 1.7;
+    year = 7;
+    cout << " The ocean's level in 7 years: " << year* rate << " Millimeters.\n";
+    
+    // Ocean level in 10 years.
+    
+    rate = 1.7;
+    year = 10;
+    cout << " The ocean's level in 10 years: " << year* rate << " Millimeters.\n";
+    return 0;
+}
