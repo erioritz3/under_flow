@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -9,14 +10,39 @@ using namespace std;
 int main() 
 {
  //Declare variables 
-    const float COUNTY_TAX;
-    const float STATE_TAX;
-    const float SALES_TAX;
-    const int DIGITS_PRECITION=2;
-    const int WIDTH=2;
-    const float sales;
+    const float COUNTY_TAX = 2.75;
+    const float STATE_TAX = 5.75;
+    const float SALES_TAX = 8.5;
+    const int DIGITS_PRECITION = 2;
+    const int WIDTH = 2;
+    double Sales, County, State, Total;
+    double Register;
+    int M;
+    int Y;
     
     
-
+    
+    cout << "Indicate the month of sell tax: ";
+    cin >> M;
+    
+    cout << "Indicate the year of sell tax";
+    cin >> Y;
+    
+    cout << "Indicate the total amount of sells collected at the register ( that is, sales plus sale tax)";
+    cin >> Register;
+    
+    Sales = Register / 1.085;
+            County = Sales*COUNTY_TAX;
+            State = Sales*STATE_TAX;
+            Total = Sales*SALES_TAX;
+            
+            cout << "Month:" << M << Y << endl;
+    cout << fixed << setprecision (DIGITS_PRECITION);
+    cout << "Total Collected:" << setw(WIDTH) << Register << endl;
+    cout << "Sales:" << setw(WIDTH) << Sales << endl;
+    cout << "County Sales Tax:" << setw(WIDTH) << County << endl;
+    cout << "State Sales Tax:" << setw(WIDTH) << State << endl;
+    cout << "Total Sales Tax:" << setw(WIDTH) << Total << endl;
+            
     return 0;
 }
