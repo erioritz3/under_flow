@@ -1,0 +1,22 @@
+//Calculating the sells tax.
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+int main() 
+{
+ //Declare variables 
+    const float COUNTY_TAX;
+    const float STATE_TAX;
+    const float SALES_TAX;
+    const int DIGITS_PRECITION=2;
+    const int WIDTH=2;
+    const float sales;
+    
+    
+
+    return 0;
+}
