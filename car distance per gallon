@@ -1,26 +1,28 @@
+/*Calculating and displays the distance the car can travel on one 
+ * tank of gas when driven in town and when driven on the highway.
+*/
+
+
 #include <iostream>
 
 using namespace std;
 
-/*Calculating and displays the distance the car can travel on one 
- * tank of gas when driven in town and when driven on the highway.
-*/
 int main() 
 {
-    double tank , distance , Town_mpg , Highway_mpg ;
+     double tank , distance , Town_mpg , Highway_mpg ;
     
     cout << "What is the size of the car's gas tank ( in gallons)?\n";
-    cin>> tank ;
+    cin >> tank ;
     cout << "What is the average miles per gallon the car gets in town?\n";
-    cin>> Town_mpg ;
+    cin >> Town_mpg ;
     cout << "What is the average miles per gallon the car gets on the highway?\n";
-    cin>> Highway_mpg ;
+    cin >> Highway_mpg ;
     
-    distance = (tank)/(Town_mpg);
+    distance = (tank)*(Town_mpg);
     cout << "The distance the car can travel in town:" << distance << " Miles.\n" ;
     
-    distance = (tank)/(Highway_mpg);
+    distance = (tank)*(Highway_mpg);
     cout << "The distance the car can travel on the highway:" << distance << " Miles.\n" ;
-    
+
     return 0;
 }
