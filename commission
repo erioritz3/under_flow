@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+
+int main(int argc, char** argv) {
+// Calculate commission of sales using the if/else if/else statement.
+    
+    float sales, commission;
+    const int DIGITS_PRECITION = 2;
+    const int WIDTH = 2;
+    
+    
+    cout << " Enter a sales amount:\"
+    cin >> sales << endl;
+    
+    if(sales <= 5000)
+    {
+    commission = sales * .10;
+    
+    cout << fixed << setprecision (DIGITS_PRECITION);  
+    cout << "Sales:" << setw(WIDTH) << "$" << sales << endl;
+    cout << "Commission:"<< setw(WIDTH) << "$" << commission << endl;
+    
+    }
+    
+    return 0;
+}
+
