@@ -1,0 +1,43 @@
+#include <iomanip>
+#include <iostream>
+#include <string>
+using namespace std;
+
+/*
+ * 
+ */
+int main() {
+// Use iomanip and its manipulators for formatted output
+// Use constants for the shipping rates
+    const float LESS_OR_70 = 1.45;
+    const float OVER_70_AND_210_OR_LESS = 2.65;
+    const float OVER_210_AND_360_OR_LESS = 3.95;
+    const float OVER_360_AND_1100_OR_LESS = 4.95;
+    double weight, miles, shipping_charges;
+    
+    cout << "Enter weight (in ounces - max: 1100): ";
+    cin >> weight << endl;
+    
+    if (weight <=0 || weight > 1100);
+    
+    {
+    cout << "Weight out of range. Program terminating.";
+    }
+    else
+                            
+    
+    cout << "Enter miles shipping (max: 3600): ";
+    cin >> miles >> endl;
+    
+    // Enter an error msg if the plug in 0 or less than 0 or greater than 1100.
+    
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
+
