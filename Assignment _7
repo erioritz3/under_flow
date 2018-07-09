@@ -1,11 +1,10 @@
-#include <iomanip>
-#include <iostream>
-#include <string>
+#include<iomanip>
+#include<iostream>
+#include<cmath>
+
 using namespace std;
 
-/*
- * 
- */
+
 int main() {
 // Use iomanip and its manipulators for formatted output
 // Use constants for the shipping rates
@@ -13,31 +12,75 @@ int main() {
     const float OVER_70_AND_210_OR_LESS = 2.65;
     const float OVER_210_AND_360_OR_LESS = 3.95;
     const float OVER_360_AND_1100_OR_LESS = 4.95;
-    double weight, miles, shipping_charges;
+    const int DIGITS_PRECITION = 2;
+    double weight, miles, charges;
     
+    // Get the weight amount 
+   
     cout << "Enter weight (in ounces - max: 1100): ";
-    cin >> weight << endl;
-    
-    if (weight <=0 || weight > 1100);
-    
+    cin >> weight;
+    // Validate the input 
+    while (weight <=0 || weight > 1100)
     {
-    cout << "Weight out of range. Program terminating.";
+    cout << "Weight out of range.\n";
+    cout << "Enter weight (in ounces - max: 1100): ";
+         cin>> weight ;
     }
-    else
-                            
     
-    cout << "Enter miles shipping (max: 3600): ";
-    cin >> miles >> endl;
+    // Get the miles 
+    cout << "Enter the miles shipping (max: 3600): ";
+    cin >> miles;
+    
+    // Validate the input
+    while (miles <=0 || miles > 3600)
+    {
+        // Get the input again
+        cout << "Shipping distance out if range.\n";
+        cout << "Enter the miles shipping (max: 3600): ";
+        cin >> miles;
+    }
+    // Calculate the weight charge if 70 oz or less.
+    
+    if(weight <= 70)
+    {
+        charges = LESS_OR_70 * ceil (miles/600); 
+        cout << fixed << setprecision (DIGITS_PRECITION); 
+        cout << "Shipping charges: $ " << charges << endl;
+    }
+    else 
+        // Calculate if more than 70 but less 210 
+        if( weight > 70 && weight <= 210)
+        {
+            charges = OVER_70_AND_210_OR_LESS * ceil (miles/600);
+                    
+            cout << fixed << setprecision (DIGITS_PRECITION);
+            cout << "Shipping charges: $ " << charges << endl;
+    
+        }
+        else
+            // Calculate if more than 210 but less than 360
+    
+    if( weight > 210 && weight <= 360)
+        {
+            charges = OVER_210_AND_360_OR_LESS * ceil (miles/600);
+                    
+            cout << fixed << setprecision (DIGITS_PRECITION);
+            cout << "Shipping charges: $ " << charges << endl;
+    
+        }
+    else 
+        // Calculate if more than 360 but less than 1100
+     if( weight > 360 && weight <= 1100)
+        {
+            charges = OVER_360_AND_1100_OR_LESS * ceil (miles/600);
+                    
+            cout << fixed << setprecision (DIGITS_PRECITION);
+            cout << "Shipping charges: $ " << charges << endl;
+    
+        }
     
     // Enter an error msg if the plug in 0 or less than 0 or greater than 1100.
     
     
-    
-    
-    
-    
-    
-    
     return 0;
 }
-
