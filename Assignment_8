@@ -1,0 +1,38 @@
+/* This program calculates how much a person would earn over a period 
+ * of time if his salary is a pennie a day and it doubles for each day worked */
+
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare the variables.
+    const int MIN_DAYS = 1,
+            MAX_DAYS = 45;
+    int days;
+    double pay;
+    
+    // Get the number of pays worked.
+    cout << " What is the number of days worked? ";
+            cin >> days;
+    
+    // Validate the input.
+    while (days < MIN_DAYS || days > MAX_DAYS )
+    {
+        cout << " Invalid input.\n";
+        cout << " Enter number of days that is not less than 1";
+        cout << " and that is not more than 45. \n";
+        cin >> days;
+    }
+    cout << " Day        Total Pay\n ";
+    cout << "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n";
+    
+    for (days = MIN_DAYS; days <= MAX_DAYS;days ++)
+        cout << days  << "\t\t" << (days * days) << endl; 
+ 
+
+    
+    
+    return 0;
+}
+  
