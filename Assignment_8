@@ -27,9 +27,10 @@ int main() {
     cout << " Day        Total Pay\n ";
     cout << "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n";
     
-    for (days = MIN_DAYS; days <= MAX_DAYS;days ++)
-        cout << days  << "\t\t" << (days * days) << endl; 
- 
+    for( int count = 1; count <= days; ++ count)
+
+        cout << count  << "\t\t" << pay *=2 << endl; 
+
 
     
     
