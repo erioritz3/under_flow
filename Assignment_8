@@ -29,7 +29,9 @@ int main() {
     
     for( int count = 1; count <= days; ++ count)
 
-        cout << count  << "\t\t" << pay *=2 << endl; 
+        cout << count  << "\t\t" << pay *=2 << endl;
+        
+        //  cout << count  << "\t\t" << "$  " <<  pay/100 << ++pay << endl ;
 
 
     
