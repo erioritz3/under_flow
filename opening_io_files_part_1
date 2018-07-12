@@ -44,7 +44,7 @@ int main ()
         }
     
     outputFile.close();
-    cout << "File name: " << filename << "written." << endl;
+    cout << "File name: " << filename << " written." << endl;
     
     // Your main program goes here
     
