@@ -1,0 +1,53 @@
+#include <iostream>
+#include <iomanip>
+#include <iostream>
+#include <cmath>
+
+
+using namespace std;
+
+/* calculating the total of a savings account that earns compound monthly 
+ * interest after a certain number of months 
+ */
+
+//function prototype
+double futureValue(double P, double i, double t);
+
+
+int main() {
+    double  val_P, val_i, val_t;
+    
+    cout << "Enter the accounts present value: ";
+    cin >> val_P;
+    
+    cout << "Enter the monthly interest: ";
+    cin >> val_i;
+    
+    cout << "Enter the number of months that the money will be left in the account: ";
+    cin >> val_t;
+    
+    //output the future value of the account
+    
+   // val_F = val_P (1+val_i);
+    
+    
+    //cout << val_F << endl;
+    
+    cout << futureValue(val_P, val_i, val_t) << endl;
+    
+    return 0;
+    
+}
+
+// futureValue function
+double futureValue(double P, double i, double t)
+
+{
+   double F, Z;
+    Z=1+i;
+    
+   F = P(pow(Z,t));
+    
+   return F;
+    
+}
