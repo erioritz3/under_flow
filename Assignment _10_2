@@ -1,0 +1,48 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+// this program calculates the total rain fall for the year
+
+int main()
+
+{
+   float J, F, M;
+    
+    cout << "Enter the total number rainfall for January: ";
+    cin >> J;
+    while (J < 0)
+    {
+        cout << "Invalid input please enter total rain amount grater than 0. \n";
+        cin >> J;
+    }
+    
+    
+    cout << "Enter the total number rainfall for Feb: ";
+    cin >> F;
+    while (F<0)
+    {
+        cout << "Invalid input please enter total rain amount grater than 0. \n";
+        cin >> F;
+    }
+    
+    cout << "Enter the total number rainfall for March: ";
+    cin >> M;
+    
+    //cout << "Enter the total number rainfall for April: ";
+   // cin >> A;
+    
+   // cout << "Enter the total number rainfall for May: ";
+    //cin >> Ma;
+    
+   // cout << "Enter the total number rainfall for June: ";
+   // cin >> J;
+    
+   // cout << "Enter the total number rainfall for July: ";
+  //  cin >> Jul;
+    
+    
+    
+    return 0;
+    
+}
