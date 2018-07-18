@@ -1,16 +1,20 @@
 #include <iostream>
 #include <iomanip>
-
+#include <string>
 using namespace std;
+
 // this program calculates the total rain fall for the year
 
 int main()
 
 {
+    // Declare string array called months for the number of months.
+    string months[]= {Jan, Feb, March, April, May, June, Jully, August, Sept, Oct, Nov, Dec};
+    
    float J, F, M;
     
     cout << "Enter the total number rainfall for January: ";
-    cin >> J;
+    cin >> Jan;
     while (J < 0)
     {
         cout << "Invalid input please enter total rain amount grater than 0. \n";
