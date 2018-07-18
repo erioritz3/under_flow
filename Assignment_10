@@ -17,18 +17,29 @@ double futureValue(double P, double i, double t);
 int main() {
     double  val_P, val_i, val_t;
     const int DIGITS_PRECITION = 2;
-    
-    cout << "Enter the accounts present value: ";
+    const int WIDTH = 21;
+    cout << "Enter the accounts present value:" << setw(WIDTH)<< "$";
     cin >> val_P;
+  
+    while(val_P < 0)
+    {
+        cout << "Please use amount greater than 0.\n";
+        cout << "Enter the accounts present value:" << setw(WIDTH)<< "$";
+        cin >> val_P;
+    }
     
-    cout << "Enter the monthly interest: ";
+        
+    cout << "Enter the percent monthly interest:" << setw(19)<< "%";
     cin >> val_i;
-    
-    cout << "Enter the number of months that the money will be left in the account: ";
+     val_i *= .01;
+     
+    cout << "Enter the number of months money will be on account: ";
+    cout << setw(WIDTH);
     cin >> val_t;
     
     cout << fixed << setprecision (DIGITS_PRECITION);
-    cout << "Total value for " << val_t << " months: ";
+    cout << "_ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n";
+    cout << "Total value for " << val_t << " months:" << setw(WIDTH)<< "$";
     
     //output the future value of the account
     
@@ -50,7 +61,7 @@ double futureValue(double P, double i, double t)
    double F;
   
     
-   F = pow(P*(1+i),t);//(pow(P*(1+A), N)
+   F = P*(pow((1+i),t));
 
     
     
