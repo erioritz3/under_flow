@@ -16,6 +16,7 @@ double futureValue(double P, double i, double t);
 
 int main() {
     double  val_P, val_i, val_t;
+    const int DIGITS_PRECITION = 2;
     
     cout << "Enter the accounts present value: ";
     cin >> val_P;
@@ -25,6 +26,9 @@ int main() {
     
     cout << "Enter the number of months that the money will be left in the account: ";
     cin >> val_t;
+    
+    cout << fixed << setprecision (DIGITS_PRECITION);
+    cout << "Total value for " << val_t << " months: ";
     
     //output the future value of the account
     
@@ -46,7 +50,8 @@ double futureValue(double P, double i, double t)
    double F, Z;
     Z=1+i;
     
-   F = P(pow(Z,t));
+   F = (pow(Z,t));
+
     
    return F;
     
