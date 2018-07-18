@@ -47,11 +47,12 @@ int main() {
 double futureValue(double P, double i, double t)
 
 {
-   double F, Z;
-    Z=1+i;
+   double F;
+  
     
-   F = (pow(Z,t));
+   F = pow(P*(1+i),t);//(pow(P*(1+A), N)
 
+    
     
    return F;
     
