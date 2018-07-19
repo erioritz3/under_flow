@@ -1,0 +1,103 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <fstream>
+using namespace std;
+
+// this program calculates the total rain fall for the year
+const int WIDTH = 8;
+const int DEC_P = 1;
+const int SIZE = 2;// size or # of elements in array
+
+// function prototypes
+//double getRainfall(int station_id); // input validation for getting temperature
+int main()
+
+{
+    
+    // Initialize string array called months for the number of months.
+    //string month[] = { "Jan"," Feb"};
+    
+    string month[SIZE]={"Jan","Feb"};
+    
+    
+    cout << "Enter the total number rainfall for: \n";
+    
+    for (int count = 0; count < SIZE; count++)
+    {
+        cout << month[count] << endl;
+        cin >> month[] << endl;
+    }
+    //cin >> month[0];
+    //while(month[0] < 0)
+    //{
+     //   cout << "Invalid input please enter total rain amount grater than 0. \n";
+     //   cin >> month[0];
+   // }
+   
+
+    
+   // cout << "Enter the total number rainfall for Feb: ";
+    //cin >> month[1];
+    
+    //while(Jan< 0)
+    //{
+       // cout << "Invalid input please enter total rain amount grater than 0. \n";
+       // cin >> month[1];
+   // }
+    return 1;
+}
+    
+    /*cout << "Enter the total number rainfall for March: ";
+    cin >> March;
+     while (March < 0)
+    {
+        cout << "Invalid input please enter total rain amount grater than 0. \n";
+        cin >> March;
+    }
+    
+    cout << "Enter the total number rainfall for April: ";
+    cin >> April;
+     while (April < 0)
+    {
+        cout << "Invalid input please enter total rain amount grater than 0. \n";
+        cin >> April;
+    }
+    
+    cout << "Enter the total number rainfall for May: ";
+    cin >> May;
+     while (May < 0)
+    {
+        cout << "Invalid input please enter total rain amount grater than 0. \n";
+        cin >> May;
+    }
+    
+    cout << "Enter the total number rainfall for June: ";
+    cin >> June;
+     while (June < 0)
+    {
+        cout << "Invalid input please enter total rain amount grater than 0. \n";
+        cin >> June;
+    }
+    
+    cout << "Enter the total number rainfall for July: ";
+    cin >> July;
+     while (July < 0)
+    {
+        cout << "Invalid input please enter total rain amount grater than 0. \n";
+        cin >> July;
+    }
+     cout << "Enter the total number rainfall for August: ";
+    cin >>  August;
+     while ( August < 0)
+    {
+        cout << "Invalid input please enter total rain amount grater than 0. \n";
+        cin >>  August;
+    }
+    
+    
+    
+    return 0;
+    
+}
+*/
