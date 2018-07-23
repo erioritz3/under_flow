@@ -1,52 +1,32 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <fstream>
+#include <cstdlib>
 using namespace std;
 
 // this program calculates the total rain fall for the year
+//const int WIDTH = 8;
+//const int DEC_P = 1;
+const int SIZE = 2;// size or # of elements in array
 
+string month[SIZE]={"Jan","Feb"};
+double total[SIZE];
+double average[SIZE];
+
+// function prototypes
+//double getRainfall(int station_id); // input validation for getting temperature
 int main()
 
 {
-    // Declare string array called months for the number of months.
-    string months[]= {Jan, Feb, March, April, May, June, Jully, August, Sept, Oct, Nov, Dec};
     
-   float J, F, M;
+    cout << "Enter the total number rainfall for: \n";
     
-    cout << "Enter the total number rainfall for January: ";
-    cin >> Jan;
-    while (J < 0)
+    for(int count = 0; count < SIZE; count++)
     {
-        cout << "Invalid input please enter total rain amount grater than 0. \n";
-        cin >> J;
+        output_parallel_array(month,total);
+        cout << month[count] << endl;
+        cin >> total[count];
     }
-    
-    
-    cout << "Enter the total number rainfall for Feb: ";
-    cin >> F;
-    while (F<0)
-    {
-        cout << "Invalid input please enter total rain amount grater than 0. \n";
-        cin >> F;
-    }
-    
-    cout << "Enter the total number rainfall for March: ";
-    cin >> M;
-    
-    //cout << "Enter the total number rainfall for April: ";
-   // cin >> A;
-    
-   // cout << "Enter the total number rainfall for May: ";
-    //cin >> Ma;
-    
-   // cout << "Enter the total number rainfall for June: ";
-   // cin >> J;
-    
-   // cout << "Enter the total number rainfall for July: ";
-  //  cin >> Jul;
-    
-    
-    
     return 0;
-    
 }
