@@ -5,28 +5,48 @@
 #include <cstdlib>
 using namespace std;
 
+double calcTotalRain(double[]);
+double calcAvgRain(double []);
+double getMaxRain(double []);
+double getMinRain(double []);
+
 // this program calculates the total rain fall for the year
 //const int WIDTH = 8;
 //const int DEC_P = 1;
-const int SIZE = 2;// size or # of elements in array
+const int SIZE = 12;// size or # of elements in array
 
-string month[SIZE]={"Jan","Feb"};
-double total[SIZE];
+string months[SIZE]={"January","February","March","April","May","June","July","August","September","October","November","December"};
+double monthly[SIZE];
 double average[SIZE];
-
+int maxRainfall, minRainfall;
 // function prototypes
 //double getRainfall(int station_id); // input validation for getting temperature
-int main()
 
+
+int main()
 {
-    
-    cout << "Enter the total number rainfall for: \n";
-    
-    for(int count = 0; count < SIZE; count++)
+    double Rain;
+     cout << "Enter the total amount of rainfall for: \n";
+   for(int i = 0; i < SIZE; i++)
+   {
+       cout << months[i] << ": ";
+       cin >> Rain;
+   }
+    while(Rain < 0)
     {
-        output_parallel_array(month,total);
-        cout << month[count] << endl;
-        cin >> total[count];
+        cout << "INVALID NUMBER: \nEnter the total amount of rainfall for \n";
+        cout << months[i] << ": " << endl;
+        cin >> Rain;
     }
+       monthly[i] = Rain;
+       }
+    for(int i =0; i < SIZE; i++)
+    {
+        cout << "[" << months[i] << ": " << monthly[i] << "]\n";
+    
+   
+    double totalRain = calcTotalRain(monthly)
+    cout << "Total for the year:" << 
+    
     return 0;
 }
