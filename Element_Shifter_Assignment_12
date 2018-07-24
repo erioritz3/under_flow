@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+//Write a function that accepts an int array and the array’s size as arguments. The
+//function should create a new array that is one element larger than the argument array.
+
+
+//The first element of the new array should be set to 0. Element 0 of the argument array
+//should be copied to element 1 of the new array, element 1 of the argument array should be copied
+//to element 2 of the new array, and so forth. The function should return a pointer to the new array.
+
+int *aArray(const int *, int);
+
+int main() {
+    int size;
+    cout << "Whats the size of the array?: ";
+    cin >> size;
+    int *bArray = new int[size];
+    
+    cout << "Please add in the elements of the array:\n";
+    for(int x = 0; x < size; x++)
+    {
+        cout << "Array position [" << x << "]:";
+        cin >> bArray[x];
+    }
+    
+    int *oneLarger = aArray(bArray,size);
+    
+    cout << "Elements in the new array: [";
+    for(int i = 0; i < size+1;i++){
+        if(i == (size+1)-1){
+            cout << *(oneLarger+i);
+        } else {
+            cout << *(oneLarger+i) << ", ";
+        }
+    }
+    cout << "]";
+    
+    return 0;
+}
+
+int *aArray(const int *array, int size){
+    int *oneLargerArray = new int[size+1];
+    for(int x = 0;x < size+1;x++){
+        if(x < size){
+            oneLargerArray[x] = array[x];
+        } else {
+            oneLargerArray[x] = 0;
+        }
+    }
+    return oneLargerArray;
+}
