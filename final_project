@@ -1,0 +1,98 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+const char FUNCTION_1 = 1;
+const char FUNCTION_2 = 2;
+const char FUNCTION_3 = 3;
+const char FUNTION_4 = 4;
+const char FUNCTION_5 = 5;
+const char QUIT_OPTION = 0;
+
+    char show_menu()
+{
+    char choice;
+    
+    do
+    {
+        cout << "Array: Program Menu\n";
+        cout << "-----------------\n\n";
+        cout << FUNCTION_1 << ". Option " << FUNCTION_1<< "\n";
+        cout << FUNCTION_2 << ". Option " << FUNCTION_2 << "\n";
+        cout << FUNCTION_3 << ". Option " << FUNCTION_3 << "\n";
+        cout << FUNTION_4 << ". Option " << FUNTION_4 << "\n";
+        cout << FUNCTION_5 << ". Option " << FUNCTION_5 << "\n";
+        cout << QUIT_OPTION << ". Quit Program\n";
+        cout << "Enter a menu choice (" << FUNCTION_1 << "-";
+        cout << FUNCTION_5 << ", or " << QUIT_OPTION << "): ";
+        cin >> choice;
+        if ( choice >=FUNCTION_1 && choice <=QUIT_OPTION);
+        if ( (choice >= FUNCTION_1 && choice <= FUNCTION_5)
+                || choice == QUIT_OPTION ) return choice;
+        cin.clear();
+        cin.ignore(1000000,'\n'); 
+        cout << "Incorrect choice, please choose from ";
+        cout << FUNCTION_1 << "-" << FUNCTION_5 << ", or ";
+        cout << QUIT_OPTION << endl;
+    } while (true);
+}
+    void do_something1()
+    {
+       long double size_R;
+        long double size_C;
+        
+        
+        
+       for(int i=0;i<size_R;i++);
+        
+        cout << "Enter the number of rows for the array: ";
+        cin >> size_R ;
+         
+        cout << "\n\nEnter the number of columns for the array: ";
+        cin >> size_C ;
+        long double *aArray = double[size_R][size_C];
+        
+        
+        cout << "Please add in the elements of the array:\n";
+    for(int x = 0; x < size_R; x++)
+    {
+        cout << "Array position [" << x << "]:";
+        cin >> aArray[x];
+    }
+        
+    }
+
+
+int main ()
+{
+    char response;
+    do
+    {
+        response = show_menu();
+        switch(response)
+        {
+            case FUNCTION_1: do_something1();
+                             break;
+                             
+           // case FUNCTION_2: do_something2();
+           //                  break;
+           //                  
+           // case FUNCTION_3: do_something3();
+                             break;
+          //  case FUNCTION_4: do_something4();
+                             break;
+                             
+          //  case FUNCTION_5: do_something5();
+                             break;
+            default:
+                cout << "Thank you for using this program, see you next time!\n";
+        }
+    }while (response != QUIT_OPTION);
+    
+    return 0;
+}
+ // this is where the code for the menu goes in so that user could call
+// the functions its going to use
+        
+        
